@@ -7,123 +7,192 @@
     <title>My Data Analytics & Machine Learning Portfolio</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS for styling -->
     <style>
-        /* Basic styling for the portfolio page */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
+        /* Basic styling for the /* General styling for the portfolio page */
 
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #444;
-            padding: 10px;
-        }
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
 
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+nav {
+    display: flex;
+    justify-content: center;
+    background: #444;
+    padding: 10px;
+    flex-wrap: wrap;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .hero {
-            background: url('images/googledeepmind-18069421') no-repeat center center/cover;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
+nav a:hover {
+    text-decoration: underline;
+}
 
-        .hero h1 {
-            font-size: 2.5rem;
-        }
+.hero {
+    background: url('portfolio-hero.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
 
-        .content {
-            padding: 20px;
-        }
+.hero h1 {
+    font-size: 2.5rem;
+}
 
-        .about {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
+.content {
+    padding: 20px;
+}
 
-        .projects {
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+.about {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
 
-        .project-card {
-            background: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: calc(33% - 20px);
-        }
+.projects {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
-        .project-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
+.project-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Default full width for mobile */
+    max-width: 300px; /* Restrict maximum width for larger screens */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
 
-        .project-card h3 {
-            margin-top: 10px;
-        }
+.project-card:hover {
+    transform: translateY(-10px);
+}
 
-        .project-card p {
-            font-size: 0.9rem;
-        }
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
-        .project-card a {
-            display: inline-block;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #0066cc;
-            font-weight: bold;
-        }
+.project-card h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
 
-        .project-card a:hover {
-            text-decoration: underline;
-        }
+.project-card p {
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
 
-        .contact {
-            background: #fff;
-            padding: 20px;
-            text-align: center;
-            border-radius: 8px;
-        }
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
 
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
-</head>
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+.contact {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .project-card {
+        width: 45%; /* Display two cards per row on tablets */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Reduce font size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack nav links vertically */
+        text-align: center;
+    }
+
+    nav a {
+        margin: 10px 0; /* Adjust margins for better spacing */
+    }
+
+    .project-card {
+        width: 100%; /* Display one card per row on mobile devices */
+        max-width: 100%; /* Ensure card takes the full width on smaller devices */
+    }
+
+    .hero {
+        height: 200px; /* Reduce height for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem; /* Adjust hero text size for mobile */
+    }
+
+    header,
+    footer {
+        padding: 15px; /* Reduce padding for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem; /* Further reduce font size for very small screens */
+    }
+
+    .about,
+    .contact {
+        padding: 15px; /* Reduce padding for small screens */
+    }
+
+    .project-card p {
+        font-size: 0.85rem; /* Adjust text size for small screens */
+    }
+}
 
 <body>
     <!-- Header Section -->
