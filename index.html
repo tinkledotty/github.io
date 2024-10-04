@@ -1,3 +1,178 @@
-module.exports = {
-  output: 'export',
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS for styling -->
+    <style>
+        /* Basic styling for the portfolio page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: url('portfolio-hero.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .about {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .projects {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(33% - 20px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .project-card h3 {
+            margin-top: 10px;
+        }
+
+        .contact {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm [Your Name], a Web Developer passionate about creating amazing projects.</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Showcasing My Work</h1>
+    </section>
+
+    <!-- About Section -->
+    <div class="content">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I'm a developer specializing in building and designing user-friendly web applications. I have experience in various technologies including HTML, CSS, JavaScript, React, and more. I am constantly learning and pushing myself to stay on the cutting edge of the web development field.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+            
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project 1 Screenshot">
+                <h3>Project One</h3>
+                <p>A web application that helps users manage their tasks efficiently. Built with React and Firebase.</p>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project 2 Screenshot">
+                <h3>Project Two</h3>
+                <p>A personal blog platform where users can share their thoughts and ideas. Built with Node.js and Express.</p>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card">
+                <img src="project3.jpg" alt="Project 3 Screenshot">
+                <h3>Project Three</h3>
+                <p>An e-commerce website designed to provide a seamless shopping experience. Built with HTML, CSS, and JavaScript.</p>
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to work together or just say hello, feel free to contact me at <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
