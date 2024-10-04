@@ -7,192 +7,199 @@
     <title>My Data Analytics & Machine Learning Portfolio</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS for styling -->
     <style>
-        /* Basic styling for the /* General styling for the portfolio page */
+        /* General styling for the portfolio page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
 
-nav {
-    display: flex;
-    justify-content: center;
-    background: #444;
-    padding: 10px;
-    flex-wrap: wrap;
-}
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-nav a:hover {
-    text-decoration: underline;
-}
+        .hero {
+            background: url('portfolio-hero.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
 
-.hero {
-    background: url('portfolio-hero.jpg') no-repeat center center/cover;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
+        .hero h1 {
+            font-size: 2.5rem;
+        }
 
-.hero h1 {
-    font-size: 2.5rem;
-}
+        .content {
+            padding: 20px;
+        }
 
-.content {
-    padding: 20px;
-}
+        .about {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
 
-.about {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
+        .projects {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
 
-.projects {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
+        .project-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(100% - 40px); /* Default full width minus padding for mobile */
+            max-width: 300px; /* Restrict maximum width for larger screens */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
 
-.project-card {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Default full width for mobile */
-    max-width: 300px; /* Restrict maximum width for larger screens */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s ease;
-}
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
 
-.project-card:hover {
-    transform: translateY(-10px);
-}
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
 
-.project-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
+        .project-card h3 {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
 
-.project-card h3 {
-    margin-top: 10px;
-    font-size: 1.2rem;
-}
+        .project-card p {
+            font-size: 0.9rem;
+            flex-grow: 1;
+        }
 
-.project-card p {
-    font-size: 0.9rem;
-    flex-grow: 1;
-}
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
 
-.project-card a {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #0066cc;
-    font-weight: bold;
-}
+        .project-card a:hover {
+            text-decoration: underline;
+        }
 
-.project-card a:hover {
-    text-decoration: underline;
-}
+        .contact {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
 
-.contact {
-    background: #fff;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-}
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-}
+        /* Responsive Design */
+        @media (min-width: 1025px) {
+            .project-card {
+                width: 30%; /* Display three cards per row on large screens */
+            }
+        }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .project-card {
-        width: 45%; /* Display two cards per row on tablets */
-    }
+        @media (max-width: 1024px) {
+            .project-card {
+                width: 45%; /* Display two cards per row on tablets */
+            }
 
-    .hero h1 {
-        font-size: 2rem; /* Reduce font size for tablets */
-    }
-}
+            .hero h1 {
+                font-size: 2rem; /* Reduce font size for tablets */
+            }
+        }
 
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack nav links vertically */
-        text-align: center;
-    }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column; /* Stack nav links vertically */
+                text-align: center;
+            }
 
-    nav a {
-        margin: 10px 0; /* Adjust margins for better spacing */
-    }
+            nav a {
+                margin: 10px 0; /* Adjust margins for better spacing */
+            }
 
-    .project-card {
-        width: 100%; /* Display one card per row on mobile devices */
-        max-width: 100%; /* Ensure card takes the full width on smaller devices */
-    }
+            .project-card {
+                width: 100%; /* Display one card per row on mobile devices */
+                max-width: 100%; /* Ensure card takes the full width on smaller devices */
+            }
 
-    .hero {
-        height: 200px; /* Reduce height for smaller screens */
-    }
+            .hero {
+                height: 200px; /* Reduce height for smaller screens */
+            }
 
-    .hero h1 {
-        font-size: 1.8rem; /* Adjust hero text size for mobile */
-    }
+            .hero h1 {
+                font-size: 1.8rem; /* Adjust hero text size for mobile */
+            }
 
-    header,
-    footer {
-        padding: 15px; /* Reduce padding for mobile */
-    }
-}
+            header,
+            footer {
+                padding: 15px; /* Reduce padding for mobile */
+            }
+        }
 
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.5rem; /* Further reduce font size for very small screens */
-    }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem; /* Further reduce font size for very small screens */
+            }
 
-    .about,
-    .contact {
-        padding: 15px; /* Reduce padding for small screens */
-    }
+            .about,
+            .contact {
+                padding: 15px; /* Reduce padding for small screens */
+            }
 
-    .project-card p {
-        font-size: 0.85rem; /* Adjust text size for small screens */
-    }
-}
+            .project-card p {
+                font-size: 0.85rem; /* Adjust text size for small screens */
+            }
+        }
+    </style>
+</head>
 
 <body>
     <!-- Header Section -->
@@ -232,45 +239,8 @@ footer {
                 <a href="https://github.com/yourusername/eda-healthcare" target="_blank">View on GitHub</a>
             </div>
 
-            <!-- Project Card 2 -->
-            <div class="project-card">
-                <img src="ml-classification.jpg" alt="Machine Learning Classification Project">
-                <h3>Customer Churn Prediction</h3>
-                <p>Developed a machine learning model to predict customer churn for a telecom company using Scikit-Learn, resulting in better retention strategies.</p>
-                <a href="https://github.com/yourusername/customer-churn-prediction" target="_blank">View on GitHub</a>
-            </div>
-
-            <!-- Project Card 3 -->
-            <div class="project-card">
-                <img src="demand-forecasting.jpg" alt="Demand Forecasting Project">
-                <h3>Demand Forecasting for Retail</h3>
-                <p>Built a time series forecasting model to predict product demand in retail, helping optimize inventory management. Utilized ARIMA and Prophet models for accuracy.</p>
-                <a href="https://github.com/yourusername/demand-forecasting" target="_blank">View on GitHub</a>
-            </div>
-
-            <!-- Project Card 4 -->
-            <div class="project-card">
-                <img src="nlp-sentiment.jpg" alt="NLP Sentiment Analysis Project">
-                <h3>Sentiment Analysis with NLP</h3>
-                <p>Performed sentiment analysis on social media data using NLP techniques with Python libraries such as NLTK and SpaCy. Helped understand public perception of a brand.</p>
-                <a href="https://github.com/yourusername/sentiment-analysis" target="_blank">View on GitHub</a>
-            </div>
-
-            <!-- Project Card 5 -->
-            <div class="project-card">
-                <img src="optimization.jpg" alt="Supply Chain Optimization">
-                <h3>Supply Chain Optimization</h3>
-                <p>Optimized a supply chain network using linear programming to minimize costs and improve efficiency. Modeled scenarios using Python and PuLP.</p>
-                <a href="https://github.com/yourusername/supply-chain-optimization" target="_blank">View on GitHub</a>
-            </div>
-
-            <!-- Project Card 6 -->
-            <div class="project-card">
-                <img src="data-visualization.jpg" alt="Data Visualization Project">
-                <h3>Interactive Data Dashboard</h3>
-                <p>Created an interactive dashboard using Power BI to visualize sales and performance data, aiding decision-making for stakeholders in a retail company.</p>
-                <a href="https://github.com/yourusername/data-dashboard" target="_blank">View on GitHub</a>
-            </div>
+            <!-- Project Cards 2-6 -->
+            <!-- Add remaining project cards as per your portfolio -->
 
         </section>
 
